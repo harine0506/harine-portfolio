@@ -1,14 +1,17 @@
 import { useState } from 'react'
+import Header from './Components/Header'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Hero from './Components/Hero'
+    
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-  <div className="w-full h-screen text-4xl text-blue-700 center">
-    Hello World,tailwind css
+  <div >
+    <Header/>
+    <Hero/>
   </div>
   )
 }
