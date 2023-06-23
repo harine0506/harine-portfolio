@@ -22,17 +22,22 @@ function Header() {
 
 
   return (
-    <div>
-        <div> //TODO name
-            <h2 className="text-[30px] font-bold">Harine
-            <span className=" text-red-500"> G.S</span></h2>
+    <div className="flex item- justify-between">
+        <div> 
+            <h2 className="text-white font-bold">Harine
+            <span className=" text-customRed"> G.S</span></h2>
         </div>
-        <div> //TODO list components
+        <div className="flex gap-7 "> 
             {menuList.map((item)=>(
                 <div>
-                    <h2>{item.title}</h2>
+                    <h2 className="text-white hover:border-[1px] border-red-500 rounded-fulltext-[15px]">
+                    {item.title}
+                    </h2>
                 </div>
             ))}
+            <h2 className='text-white
+            hover:border-[1px] border-red-500 rounded-full
+            text-[15px] px-3 py-1 cursor-pointer hover:bg-gradient-to-r from-red-500 to-red-800'>Hire Me</h2>
         </div>
     </div>
 )
