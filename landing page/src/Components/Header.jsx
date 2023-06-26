@@ -1,7 +1,8 @@
 import React,{ useState} from 'react'
 import { HiBars3BottomRight,HiPause } from "react-icons/hi2";
+import MenuOverlay from './MenuOverlay'
 function Header() {
-    const[toggle,setToggle]=useState(true)
+    const[toggle,setToggle]=useState(false)
     const menuList=[
         {
             id:1,
@@ -43,6 +44,7 @@ function Header() {
         <div className='md:hidden'>
             {toggle?<HiBars3BottomRight onClick={()=>setToggle(!toggle)} className="text-white text-[22px] cursor-pointer"/>
             :<HiPause onClick={()=>setToggle(!toggle)} className="text-white text-[22px]"/>}
+            {toggle?<MenuOverlay menuList={menuList}/>:null}
             
         </div>
     </div>
